@@ -1,0 +1,10 @@
+.asterisk {
+    color: var(--green600);
+}
+
+.text {
+    font-size: 16px;
+    font-family: 'Karla-Regular';
+    letter-spacing: 0px;
+    line-height: 150%;
+}

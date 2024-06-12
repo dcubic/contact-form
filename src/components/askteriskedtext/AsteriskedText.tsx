@@ -1,4 +1,4 @@
-import styles from "./LabelText.module.css";
+import styles from "./AskteriskedText.module.css";
 
 interface AsteriskedTextProps {
   text: string;
@@ -6,7 +6,7 @@ interface AsteriskedTextProps {
 
 function AsteriskedText({ text }: AsteriskedTextProps) {
   return (
-    <p>
+    <p className={styles.text}>
       {text} <span className={styles.asterisk}>*</span>
     </p>
   );

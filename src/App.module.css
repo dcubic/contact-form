@@ -1,8 +1,24 @@
 .appContainer {
     display: flex;
     flex-direction: column;
+    margin: 32px;
     padding: 24px;
     background-color: white;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Karla-Bold';
+    letter-spacing: -1px;
+    line-height: 100%;
+}
+
+.smallText {
+    font-size: 16px;
+    font-family: 'Karla-Regular';
+    letter-spacing: 0px;
+    line-height: 150%;
 }
 
 .alignmentContainer {
@@ -17,6 +33,36 @@
     padding: 12px;
     box-sizing: border-box;
     border-radius: 5px;
+    border: 2px solid var(--grey500);
+}
+
+.textInput:hover {
+    border: 2px solid var(--green600);
+}
+
+.textInput:focus {
+    border: 2px solid var(--green600);
+    outline: none;
+}
+
+.radioInputLabel {
+    font-family: 'Karla-Regular';
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 150%;
+}
+
+.textArea {
+    height: 240px;
+    resize: none;
+    overflow: hidden;
+}
+
+.button {
+    font-family: 'Karla-Bold';
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 150%;
 }
 
 @media screen and (min-width: 600px) {

@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import AsteriskedText from "./components/labeltext/LabelText.tsx";
+import AsteriskedText from "./components/askteriskedtext/AsteriskedText.tsx";
 
 function App() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -12,12 +12,12 @@ function App() {
 
   return (
     <div className={styles.appContainer}>
-      <h1>Contact Us</h1>
+      <h1 className={styles.title}>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.alignmentContainer}>
           <div>
             <label htmlFor="first-name-input" onClick={handleInactiveLabelClick}>
-              <AsteriskedText text="First Name" />
+              <AsteriskedText text="First Name"/>
             </label>
             <input id="first-name-input" className={styles.textInput}/>
           </div>
@@ -25,19 +25,19 @@ function App() {
             <label htmlFor="last-name-input" onClick={handleInactiveLabelClick}>
               <AsteriskedText text="Last Name" />
             </label>
-            <input id="last-name-input" />
+            <input id="last-name-input" className={styles.textInput}/>
           </div>
         </div>
         <div>
           <label htmlFor="email-address-input" onClick={handleInactiveLabelClick}>
             <AsteriskedText text="Email Address" />
           </label>
-          <input id="email-address-input" />
+          <input id="email-address-input" className={styles.textInput}/>
         </div>
         <div>
           <AsteriskedText text="Query Type" />
           <div className={styles.alignmentContainer}>
-            <label htmlFor="general-enquiry-radio-input">
+            <label htmlFor="general-enquiry-radio-input" className={styles.radioInputLabel}>
               <input
                 id="general-enquiry-radio-input"
                 type="radio"
@@ -45,7 +45,7 @@ function App() {
               />
               General Enquiry
             </label>
-            <label htmlFor="support-request-radio-input">
+            <label htmlFor="support-request-radio-input" className={styles.radioInputLabel}>
               <input
                 id="support-request-radio-input"
                 type="radio"
@@ -59,7 +59,7 @@ function App() {
           <label htmlFor="message-input" onClick={handleInactiveLabelClick}>
             <AsteriskedText text="Message" />
           </label>
-          <input id="message-input" />
+          <textarea id="message-input" className={`${styles.textInput} ${styles.textArea}`}/>
         </div>
         <div>
           <input id="consent-checkbox" type="checkbox" />
@@ -67,7 +67,7 @@ function App() {
             <AsteriskedText text="I consent to being contacted by the team" />
           </label>
         </div>
-        <button>Submit</button>
+        <button className={styles.button}>Submit</button>
       </form>
     </div>
   );
