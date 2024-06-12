@@ -1,0 +1,30 @@
+:root {
+  --grey900: rgb(42, 65, 68);
+  --grey500: rgb(134, 162, 165);
+  --green600: rgb(12, 125, 105);
+  --green200: rgb(224, 241, 232);
+  --error-red: rgb(215, 60, 60);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body, p, h1, #root {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--green200);
+}
