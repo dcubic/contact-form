@@ -1,9 +1,16 @@
 import styles from "./App.module.css";
 import AsteriskedText from "./components/askteriskedtext/AsteriskedText.tsx";
 
+import { FormEvent } from 'react';
+
 function App() {
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const form = event.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
   }
 
   function handleInactiveLabelClick(event: React.MouseEvent<HTMLElement>) {
@@ -13,7 +20,7 @@ function App() {
   return (
     <div className={styles.appContainer}>
       <h1 className={styles.title}>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={event => handleSubmit(event)} className={styles.form}>
         <div className={styles.alignmentContainer}>
           <div>
             <label
@@ -24,6 +31,7 @@ function App() {
             </label>
             <input
               id="first-name-input"
+              name="firstName"
               className={`${styles.textInput} ${styles.smallText}`}
             />
           </div>
@@ -33,6 +41,7 @@ function App() {
             </label>
             <input
               id="last-name-input"
+              name="lastName"
               className={`${styles.textInput} ${styles.smallText}`}
             />
           </div>
@@ -46,6 +55,7 @@ function App() {
           </label>
           <input
             id="email-address-input"
+            name="emailAddress"
             className={`${styles.textInput} ${styles.smallText}`}
           />
         </div>
@@ -59,7 +69,7 @@ function App() {
               <input
                 id="general-enquiry-radio-input"
                 type="radio"
-                name="query-type"
+                name="queryType"
                 className={styles.radioInput}
               />
               General Enquiry
@@ -71,7 +81,7 @@ function App() {
               <input
                 id="support-request-radio-input"
                 type="radio"
-                name="query-type"
+                name="queryType"
                 className={styles.radioInput}
               />
               Support Request
@@ -84,6 +94,7 @@ function App() {
           </label>
           <textarea
             id="message-input"
+            name="message"
             className={`${styles.textInput} ${styles.smallText} ${styles.textArea}`}
           />
         </div>
@@ -91,9 +102,10 @@ function App() {
           <input
             id="consent-checkbox"
             type="checkbox"
+            name="consentStatus"
             className={styles.checkboxInput}
           />
-          <label htmlFor="consent-checkbox" onClick={handleInactiveLabelClick}>
+          <label htmlFor="consent-checkbox" onClick={handleInactiveLabelClick} className={styles.consentLabel}>
             <AsteriskedText text="I consent to being contacted by the team" />
           </label>
         </div>

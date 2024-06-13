@@ -11,9 +11,10 @@
 :root {
   --grey900: rgb(42, 65, 68);
   --grey500: rgb(134, 162, 165);
-  --green600: rgb(12, 125, 105);
+  --green600: rgb(12, 125, 104);
+  --darkgreen600: rgb(6, 62, 52);
   --green200: rgb(224, 241, 232);
-  --error-red: rgb(215, 60, 60);
+  --errorRed: rgb(215, 60, 60);
 }
 
 body, p, h1, #root {

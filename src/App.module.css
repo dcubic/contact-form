@@ -5,6 +5,7 @@
   padding: 24px;
   background-color: white;
   border-radius: 10px;
+  gap: 32px;
 }
 
 .title {
@@ -12,6 +13,12 @@
   font-family: "Karla-Bold";
   letter-spacing: -1px;
   line-height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .smallText {
@@ -85,8 +92,8 @@
 .consentContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  margin: 24px 0;
 }
 
 .checkboxInput {
@@ -94,6 +101,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 18px;
+  min-width: 18px;
   height: 18px;
   border: 2px solid var(--grey500);
   cursor: pointer;
@@ -102,6 +110,10 @@
 .checkboxInput:checked {
   background-image: url('./assets/images/icon-checkbox-check.svg');
   border: none;
+}
+
+.consentLabel {
+  padding: 0 16px;
 }
 
 .button {
@@ -115,6 +127,11 @@
   background-color: var(--green600);
   color: white;
   min-height: 59px; /* Just following orders */
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--darkgreen600);
 }
 
 @media screen and (min-width: 600px) {
