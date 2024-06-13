@@ -19,20 +19,20 @@ function App() {
             <label htmlFor="first-name-input" onClick={handleInactiveLabelClick}>
               <AsteriskedText text="First Name"/>
             </label>
-            <input id="first-name-input" className={styles.textInput}/>
+            <input id="first-name-input" className={`${styles.textInput} ${styles.smallText}`}/>
           </div>
           <div>
             <label htmlFor="last-name-input" onClick={handleInactiveLabelClick}>
               <AsteriskedText text="Last Name" />
             </label>
-            <input id="last-name-input" className={styles.textInput}/>
+            <input id="last-name-input" className={`${styles.textInput} ${styles.smallText}`}/>
           </div>
         </div>
         <div>
           <label htmlFor="email-address-input" onClick={handleInactiveLabelClick}>
             <AsteriskedText text="Email Address" />
           </label>
-          <input id="email-address-input" className={styles.textInput}/>
+          <input id="email-address-input" className={`${styles.textInput} ${styles.smallText}`}/>
         </div>
         <div>
           <AsteriskedText text="Query Type" />
@@ -42,6 +42,7 @@ function App() {
                 id="general-enquiry-radio-input"
                 type="radio"
                 name="query-type"
+                className={styles.radioInput}
               />
               General Enquiry
             </label>
@@ -50,6 +51,7 @@ function App() {
                 id="support-request-radio-input"
                 type="radio"
                 name="query-type"
+                className={styles.radioInput}
               />
               Support Request
             </label>
@@ -59,7 +61,7 @@ function App() {
           <label htmlFor="message-input" onClick={handleInactiveLabelClick}>
             <AsteriskedText text="Message" />
           </label>
-          <textarea id="message-input" className={`${styles.textInput} ${styles.textArea}`}/>
+          <textarea id="message-input" className={`${styles.textInput} ${styles.smallText} ${styles.textArea}`}/>
         </div>
         <div>
           <input id="consent-checkbox" type="checkbox" />

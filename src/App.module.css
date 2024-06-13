@@ -26,14 +26,16 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .textInput {
     width: 100%;
-    padding: 12px;
+    padding: 12px 24px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 2px solid var(--grey500);
+    height: 51px;
 }
 
 .textInput:hover {
@@ -46,10 +48,52 @@
 }
 
 .radioInputLabel {
+    width: 100%;
     font-family: 'Karla-Regular';
     font-size: 18px;
     letter-spacing: 0px;
     line-height: 150%;
+    border: 2px solid var(--grey500);
+    border-radius: 8px;
+    padding: 12px 24px;
+    height: 51px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.radioInputLabel:hover {
+    color: var(--green600);
+    cursor: pointer;
+}
+
+.radioInput {
+    width: 18px;
+    height: 18px;
+    margin: 0 16px 0 0;
+    border: 2px solid var(--grey500);
+    border-radius: 50%;
+    accent-color: var(--green600);
+    background-color: white;
+}
+
+.radioInput:hover {
+    /* accent-color: var(--green600); */
+}
+
+.radioInput:active {
+    filter: brightness(1);
+    /* --accent-brightness: 0.5; */
+    /* filter: brightness(var(--accent-brightness)); */
+    /* accent-color: blue; */
+}
+
+.radioInput:active {
+    /* --accent-brightness: 0.5; */
+}
+
+.radioInput:active::-webkit-accent-color {
+    filter: brightness(var(--accent-brightness));
 }
 
 .textArea {
@@ -59,10 +103,16 @@
 }
 
 .button {
+    width: 100%;
     font-family: 'Karla-Bold';
     font-size: 18px;
     letter-spacing: 0px;
     line-height: 150%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--green600);
+    color: white;
+    min-height: 59px; /* Just following orders */
 }
 
 @media screen and (min-width: 600px) {
