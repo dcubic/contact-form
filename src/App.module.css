@@ -28,12 +28,22 @@
   line-height: 150%;
 }
 
+.errorColour {
+  color: var(--errorRed);
+}
+
 .alignmentContainer {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.inputBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .textInput {
@@ -43,6 +53,11 @@
   border-radius: 8px;
   border: 2px solid var(--grey500);
   height: 51px;
+  margin: 8px 0;
+}
+
+.errorBorder {
+  border-color: var(--errorRed);
 }
 
 .textInput:hover {
@@ -52,6 +67,12 @@
 .textInput:focus {
   border: 2px solid var(--green600);
   outline: none;
+}
+
+.queryTypeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .radioInputLabel {
@@ -91,9 +112,15 @@
 
 .consentContainer {
   display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+  gap: 8px;
+}
+
+.validConsentContainer {
+  display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 24px 0;
 }
 
 .checkboxInput {
@@ -134,8 +161,18 @@
   background-color: var(--darkgreen600);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
+  .appContainer {
+    width: 600px;
+  }
+
   .alignmentContainer {
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .appContainer {
+    width: 736px;
   }
 }
