@@ -1,0 +1,48 @@
+.toastContainer {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey900);
+  border-radius: 8px;
+  padding: 24px;
+  gap: 8px;
+  width: 75%;
+  min-width: 325px;
+  max-width: 450px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.displayed {
+  opacity: 1.0;
+}
+
+.headerContainer {
+  padding: none;
+  margin: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.header {
+  font-family: "Karla-Regular";
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 150%;
+  color: white;
+}
+
+.text {
+  font-size: 16px;
+  font-family: "Karla-Regular";
+  letter-spacing: 0px;
+  line-height: 150%;
+  color: white;
+}

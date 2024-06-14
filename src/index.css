@@ -17,7 +17,7 @@
   --errorRed: rgb(215, 60, 60);
 }
 
-body, p, h1, #root {
+body, p, h1, h2, #root {
   margin: 0;
 }
 

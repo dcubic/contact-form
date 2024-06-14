@@ -161,6 +161,10 @@
   background-color: var(--darkgreen600);
 }
 
+.button:active {
+  filter: brightness(1.5);
+}
+
 @media screen and (min-width: 700px) {
   .appContainer {
     width: 600px;

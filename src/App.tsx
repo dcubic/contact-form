@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 import AsteriskedText from "./components/askteriskedtext/AsteriskedText.tsx";
 import ErrorText from "./components/errortext/ErrorText.tsx";
+import Toast from './components/toast/Toast.tsx';
 
 import { FormEvent, useState } from "react";
 import EmailValidator from "email-validator";
@@ -25,6 +26,7 @@ const initialErrorState: ErrorState = {
 
 function App() {
   const [errorState, setErrorState] = useState<ErrorState>(initialErrorState);
+  const [toastToggle, setToastToggle] = useState(false);
 
   function getQueryType(selectedInputElement: string): string {
     if (selectedInputElement === "support-request-radio-input") {
@@ -71,7 +73,7 @@ function App() {
     );
 
     if (!hasErrors) {
-      // TODO logic to display Modal
+      setToastToggle(oldValue => !oldValue);
     }
 
     setErrorState(newErrorState);
@@ -92,6 +94,7 @@ function App() {
 
   return (
     <div className={styles.appContainer}>
+      <Toast displaySignal = {toastToggle}/>
       <h1 className={styles.title}>Contact Us</h1>
       <form onSubmit={(event) => handleSubmit(event)} className={styles.form}>
         <div className={styles.alignmentContainer}>
